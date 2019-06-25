@@ -1,0 +1,22 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    schema: classpath:db/schema.sql
+    driver-class-name: org.h2.Driver
+    jdbc-url: jdbc:h2:mem:test
+    username:
+    password:
+    initialization-mode: always
+
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
